@@ -17,7 +17,7 @@ const Dog = () => {
   const mouseGroup = useRef();
   const targetRotation = useRef({ x: 0, y: 0 });   
 
-  const model = useGLTF("/models/dog.drc.glb");
+  const model = useGLTF(`${import.meta.env.BASE_URL}models/dog.drc.glb`);
 
   useThree(({ camera, scene, gl }) => {
     camera.position.z = 0.48;
@@ -32,10 +32,10 @@ const Dog = () => {
   }, [actions]);
 
   const [normalMap, specularMap, branchMap, branchNormalMap] = useTexture([
-    "/dog_normals.jpg",
-    "/dog_specular.jpg",
-    "/branches_diffuse.jpg",
-    "/branches_normals.jpg",
+    `${import.meta.env.BASE_URL}dog_normals.jpg`,
+    `${import.meta.env.BASE_URL}dog_specular.jpg`,
+    `${import.meta.env.BASE_URL}branches_diffuse.jpg`,
+    `${import.meta.env.BASE_URL}branches_normals.jpg`,
   ]).map((texture) => {
     texture.flipY = false;
     return texture;
@@ -69,26 +69,26 @@ const Dog = () => {
     mat19,
     mat20,
   ] = useTexture([
-    "./matcap/mat-1.png",
-    "./matcap/mat-2.png",
-    "./matcap/mat-3.png",
-    "./matcap/mat-4.png",
-    "./matcap/mat-5.png",
-    "./matcap/mat-6.png",
-    "./matcap/mat-7.png",
-    "./matcap/mat-8.png",
-    "./matcap/mat-9.png",
-    "./matcap/mat-10.png",
-    "./matcap/mat-11.png",
-    "./matcap/mat-12.png",
-    "./matcap/mat-13.png",
-    "./matcap/mat-14.png",
-    "./matcap/mat-15.png",
-    "./matcap/mat-16.png",
-    "./matcap/mat-17.png",
-    "./matcap/mat-18.png",
-    "./matcap/mat-19.png",
-    "./matcap/mat-20.png",
+    `${import.meta.env.BASE_URL}matcap/mat-1.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-2.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-3.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-4.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-5.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-6.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-7.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-8.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-9.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-10.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-11.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-12.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-13.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-14.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-15.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-16.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-17.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-18.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-19.png`,
+    `${import.meta.env.BASE_URL}matcap/mat-20.png`,
   ]).map((texture) => {
     texture.flipY = false;
     texture.colorSpace = THREE.SRGBColorSpace;
@@ -537,7 +537,6 @@ const Dog = () => {
       />
       </group>
       <directionalLight position={[0, 5, 5]} color={0xffffff} intensity={10} />
-      {/* <OrbitControls /> */}
     </>
   );
 };

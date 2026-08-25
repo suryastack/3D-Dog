@@ -7,13 +7,13 @@ function App() {
     <>
       <main>
         <div className="images">
-          <img id="tomorrowland" src="/tomorrowland.png" alt="" />
-          <img id="navy-pier" src="/navy-pier.png" alt="" />
-          <img id="msi-chicago" src="/msi-chicago.png" alt="" />
-          <img id="phone" src="/phone.png" alt="" />
-          <img id="kikk" src="/kikk.png" alt="" />
-          <img id="kennedy" src="/kennedy.png" alt="" />
-          <img id="opera" src="/opera.png" alt="" />
+          <img id="tomorrowland" src={`${import.meta.env.BASE_URL}navy-pier.png`} alt="" />
+          <img id="navy-pier" src={`${import.meta.env.BASE_URL}tomorrowland.png`} alt="" />
+          <img id="msi-chicago" src={`${import.meta.env.BASE_URL}msi-chicago.png`} alt="" />
+          <img id="phone" src={`${import.meta.env.BASE_URL}phone.png`} alt="" />
+          <img id="kikk" src={`${import.meta.env.BASE_URL}kikk.png`} alt="" />
+          <img id="kennedy" src={`${import.meta.env.BASE_URL}kennedy.png`} alt="" />
+          <img id="opera" src={`${import.meta.env.BASE_URL}opera.png`} alt="" />
         </div>
         <Canvas
           id="canvas-elem"
