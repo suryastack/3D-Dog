@@ -282,7 +282,6 @@ const Dog = () => {
         endTrigger: "#section-5",
         end: "bottom bottom",
         start: "top top",
-        markers: true,
         scrub: true,
       },
     });
